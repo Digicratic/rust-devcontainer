@@ -1,0 +1,3 @@
+# Custom aliases
+alias ll='ls -l --color'
+alias lla='ls -la --color'
