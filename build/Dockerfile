@@ -1,5 +1,5 @@
 FROM rust:slim
-LABEL org.opencontainers.image.source="https://github.com/pgoodall/rust-devcontainer" \
+LABEL org.opencontainers.image.source="https://github.com/Digicatic/rust-devcontainer" \
       org.opencontainers.image.description="A Rust development container with the latest stable toolchain and common development tools." \
       org.opencontainers.image.authors="Pete Goodall <pete@digicratic.com>"
 # Install the development dependencies
