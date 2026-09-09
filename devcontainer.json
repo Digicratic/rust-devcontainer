@@ -1,24 +1,46 @@
 {
     "name": "rust-devcontainer",
-    "image": "rust-development:latest",
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "terminal.integrated.shell.linux": "/usr/bin/zsh"
-            },
-            "extensions": [
-                "rust-lang.rust-analyzer",
-                "ms-vscode.cpptools",
-                "vadimcn.vscode-lldb",
-                "ms-vscode.cmake-tools",
-                "twxs.cmake",
-                "fill-labs.dependi",
-                "tamasfe.even-better-toml",
-                "GitLab.gitlab-workflow"
-            ]
+    "build": {
+        "dockerfile": "./build/Dockerfile",
+        "context": "./build/"
+    },
+    // "customizations": {
+    //     "vscode": {
+    //         "settings": {
+    //             "terminal.integrated.shell.linux": "/usr/bin/zsh"
+    //         },
+    //         "extensions": [
+    //             "rust-lang.rust-analyzer",
+    //             "ms-vscode.cpptools",
+    //             "vadimcn.vscode-lldb",
+    //             "ms-vscode.cmake-tools",
+    //             "twxs.cmake",
+    //             "fill-labs.dependi",
+    //             "tamasfe.even-better-toml",
+    //             "GitLab.gitlab-workflow"
+    //         ]
+    //     }
+    // },
+
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"installOhMyZsh": "true",
+			"installOhMyZshConfig": "true",
+            "username": "root",
+			"userUid": "0",
+			"userGid": "0",
+            "upgradePackages": "true"
+        },
+        "ghcr.io/devcontainers/features/rust:1": "latest",
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
         }
     },
-    // "workspaceFolder": "/workspace",
+
+    "workspaceFolder": "/workspace",
     // "workspaceMount": "source=/var/local/development,target=/workspace,type=bind,consistency=cached",
     // Handle CARGO_HOME=/usr/local/cargo creating a volume for the cargo data to persist between runs
     "mounts": [
