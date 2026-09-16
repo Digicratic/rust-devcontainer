@@ -40,8 +40,6 @@
         }
     },
 
-    "workspaceFolder": "/workspace",
-    // "workspaceMount": "source=/var/local/development,target=/workspace,type=bind,consistency=cached",
     // Handle CARGO_HOME=/usr/local/cargo creating a volume for the cargo data to persist between runs
     "mounts": [
         {
