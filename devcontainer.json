@@ -51,5 +51,6 @@
     "runArgs": [
         "--restart=always",
         "--name=rust-devcontainer"
-    ]
+    ],
+    "remoteUser": "vscode"
 }

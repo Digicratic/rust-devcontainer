@@ -21,3 +21,5 @@ RUN chown ${USER_NAME}.${USER_NAME} /home/${USER_NAME}/.zsh* && \
     echo "en_GB.UTF-8 UTF-8" > /etc/locale.gen && locale-gen && update-locale && \
     apt remove -y locales && \
     apt-get clean
+
+USER $USER_NAME
