@@ -17,7 +17,6 @@
     //             "twxs.cmake",
     //             "fill-labs.dependi",
     //             "tamasfe.even-better-toml",
-    //             "GitLab.gitlab-workflow"
     //         ]
     //     }
     // },
@@ -28,10 +27,8 @@
 			"configureZshAsDefaultShell": "true",
 			"installOhMyZsh": "true",
 			"installOhMyZshConfig": "true",
-            "username": "root",
-			"userUid": "0",
-			"userGid": "0",
-            "upgradePackages": "true"
+            "username": "vscode",
+			"upgradePackages": "true"
         },
         "ghcr.io/devcontainers/features/rust:1": "latest",
 		"ghcr.io/devcontainers/features/git:1": {
