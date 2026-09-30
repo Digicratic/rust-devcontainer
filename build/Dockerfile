@@ -16,9 +16,8 @@ RUN sed -i 's/http/https/g' /etc/apt/sources.list.d/debian.sources && \
 ENV USER_NAME=vscode
 RUN useradd -m $USER_NAME -s /usr/bin/zsh --home /home/$USER_NAME
 
-COPY configs/.zshrc configs/.zsh_aliases /home/$USER_NAME/
-RUN chown ${USER_NAME}.${USER_NAME} /home/${USER_NAME}/.zsh* && \
-    echo "en_GB.UTF-8 UTF-8" > /etc/locale.gen && locale-gen && update-locale && \
+COPY --chown=$USER_NAME:$USER_NAME configs/.zsh* /home/$USER_NAME/
+RUN echo "en_GB.UTF-8 UTF-8" > /etc/locale.gen && locale-gen && update-locale && \
     apt remove -y locales && \
     apt-get clean
 
