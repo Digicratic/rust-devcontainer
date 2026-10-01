@@ -47,7 +47,7 @@
     ],
     "runArgs": [
         "--restart=always",
-        "--name=rust-devcontainer"
+        "--name=rust-devcontainer-${localWorkspaceFolderBasename}"
     ],
     "remoteUser": "vscode"
 }
